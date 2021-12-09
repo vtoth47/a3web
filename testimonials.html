@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <!-- Template taken from w3schools and gutted; https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_website&stacked=h -->
+    <title>Lumpy Potato</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- stylesheet for hamburger menu icon: -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src= "js/javascript.js"></script>
+  </head>
+<body>
+<!-- -----------------
+- Navbar
+- Owner : Ridley Soudack
+- Date  : Dec 6
+------------------- -->
+  <div class="navbar-flex" id="headerbar"> <!-- This flex contains the two sides of the header - the logo, and the navbar buttons-->
+    <div class="navbar-flex-left">
+      <a class="logo-container" href = 'index.html'>
+        <img class='logo' src='images/logo.png' alt = 'Lumpy Potato'>
+      </a> <!-- The hamburger icon will only appear for mobile screens-->
+      <a class="hamburger" href="javascript:void(0);" onclick="navBar()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="navbar-flex-right"> <!-- This flexbox contains the navbar buttons. It is accessible on mobile through the hamburger menu.-->
+      <div class="navbar-menu" id="navbarmaster"> <!--The general design of the navbar is based on: https://www.w3schools.com/css/css_navbar_horizontal.asp but is heavily modified.-->
+        <div class="dropdown">
+          <a class="navbar-item" href="portfolio.html" >Portfolio</a>
+          <div class="dropdown-menu"> <!-- Two of our navbar items have dropdown menus. The coding and animation for these dropdowns is based on: https://codinhood.com/micro/10-dropdown-menu-animations-css-transform-->
+            <a class="dropdown-item1" href="portfolio.html#present">Present</a>
+            <a class="dropdown-item2" href="portfolio.html#past">Past</a>
+          </div>
+        </div>
+        <a class="navbar-item" id='active' href="testimonials.html" >Testimonials</a>
+        <a class="navbar-item" href="TeamPage.html" >Team</a>
+        <div class="dropdown">
+          <a class="navbar-item" href="contact.html" >Contact</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item1" href="contact.html#ProjForm">Project Form</a>
+            <a class="dropdown-item2" href="contact.html#Offices">Offices</a>
+          </div>
+        </div>    
+        <a class="navbar-item" href="location.html" >Location</a>
+      </div>
+    </div>
+  </div>
+<!-- End Owner: Ridley-->
+  <!-- Hero Image, modified from Kerstyne-->
+  <div class="heroimagecontainercontainer">
+    <div class="heroimagecontainer" id="TestimonialHero">
+      <div class="heroimagetitle">
+      <!-- Image taken from Victor's work in Northern Quebec -->
+        <h1> Testimonials </h1>  
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial Section - Victor Toth ----------------------------->
+  <!-- Completely non-fake testimonials from actual people, not paid actors.-->
+  <div class="flex-TestimonialBox">
+    <div>
+      <h4>Reliability</h4>
+      <p>"Lump Potato always meets deadlines seldomly needing revisions. This is the kind of reliability that astounds us."</p>
+      <p>J-L. Picard, Enterprise Geospatial</p>
+    </div>
+
+    <div>
+      <h4>Trustworthy</h4>
+      <p>"If you need someone at your side, throughout the long journey of your project, whom always has your back, that is Lumpy Potato."</p>
+      <p>A. Elessar, CEO - Gondor Geomatics</p>
+    </div>
+  </div>
+
+  <!-- Video section using javascript-->
+  <!-- div box that contains 2 videos and the play/pause buttons for each.-->
+  <!-- onclick="playpause" calls the jscript function to control the video.-->
+  <div class="VideoBox"> 
+    <p>Video messages from one of our partners.</p>
+    <div>
+      <button class="ButtonVideo" onclick="playPause()">Play/Pause</button> 
+    </div>
+    <video class="video1" id="video1">
+      <source src="images/video1.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+    </video>
+    <div>
+      <button class="ButtonVideo" onclick="playPause2()">Play/Pause</button> 
+    </div>
+    <video class="video2" id="video2">
+      <source src="images/video2.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+    </video>
+  </div> 
+
+  <!-- Footer, Owner: Victor-->
+  <footer class="footer">
+      <h4>Headquarters</h4>
+      <p>290 Bremner Blvd - Toronto, ON</p>
+      <p>Copyright 2021</p>  
+  </footer>
+  <script src="js/javascript.js"></script>
+</body>
+</html>    

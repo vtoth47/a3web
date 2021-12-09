@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <!-- Template taken from w3schools and gutted; https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_website&stacked=h -->
+  <title>Lumpy Potato</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- stylesheet for hamburger menu icon: -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!-- -----------------
+- Navbar
+- Owner : Ridley Soudack
+- Date  : Dec 6
+------------------- -->
+  <div class="navbar-flex" id="headerbar"> <!-- This flex contains the two sides of the header - the logo, and the navbar buttons-->
+    <div class="navbar-flex-left">
+      <a class="logo-container" href = 'index.html'>
+        <img class='logo' src='images/logo.png' alt = 'Lumpy Potato'>
+      </a> <!-- The hamburger icon will only appear for mobile screens-->
+      <a class="hamburger" href = "javascript:void(0);" onclick="navBar()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="navbar-flex-right"> <!-- This flexbox contains the navbar buttons. It is accessible on mobile through the hamburger menu.-->
+      <div class="navbar-menu" id="navbarmaster"> <!--The general design of the navbar is based on: https://www.w3schools.com/css/css_navbar_horizontal.asp but is heavily modified.-->
+        <div class="dropdown">
+          <a class="navbar-item" href="portfolio.html" >Portfolio</a>
+          <div class="dropdown-menu"> <!-- Two of our navbar items have dropdown menus. The coding and animation for these dropdowns is based on: https://codinhood.com/micro/10-dropdown-menu-animations-css-transform-->
+            <a class="dropdown-item1" href="portfolio.html#present">Present</a>
+            <a class="dropdown-item2" href="portfolio.html#past">Past</a>
+          </div>
+        </div>
+        <a class="navbar-item" href= "testimonials.html" >Testimonials</a>
+        <a class="navbar-item" id='active' href="TeamPage.html" >Team</a>
+        <div class="dropdown">
+          <a class="navbar-item" href="contact.html" >Contact</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item1" href="contact.html#ProjForm">Project Form</a>
+            <a class="dropdown-item2" href="contact.html#Offices">Offices</a>
+          </div>
+        </div>    
+        <a class="navbar-item" href="location.html" >Location</a>
+      </div>
+    </div>
+  </div>
+<!-- End Owner: Ridley-->
+<!-- Image Header, Owner: Kerstyne-->
+<div class="TPheroimagecontainercontainer">
+<div class="TPheroimagecontainer">
+  <div class="TPheroimagetitle">
+  <!-- Image taken from https://i.pinimg.com/564x/10/fd/c9/10fdc97ddabf1d7580a43f6800920f20.jpg -->
+    <h1>About Us</h1>  
+  </div>
+</div>
+</div>
+<!-- Team section of team page! Photo's of us, links to our linkedins and a small blurb
+Owner: Kerstyne -->
+<div class="flex-Goteam">
+  <div>
+    <div>
+      <img class="teamimage" src="images/OllieandMe.jpg" alt="Ollie and I Vibing">
+    </div>
+    <div class="teaminfocont">
+      <p class="teamname">Kerstyne Widmeyer</p>
+      <p class="teaminfo">Kerstyne has a bachelors degree in Zoology/ Ecology and an Environmental
+        Technician diploma. She's currently working towards a graduate ceritifcate in GIS at Fleming
+        College. Most recently shes worked with the Niagara Coastal Community to map out nutrient levels 
+        within Lake Erie in an effect to decrease the likelihood of harmful algal blooms.
+        With a passion for coding, spatial analysis and the environment, she's ready to
+        help you implement your environmental geospatial projects.</p>
+      <button class="linkedinbutton" onclick='LinkedinKW()'><i class="fa fa-linkedin"></i></button>
+    </div>
+  </div>
+  <div>
+    <div>
+      <img class="teamimage" src="images/JadeTeamsPg.jpeg" alt="Jade and her saw">
+    </div>
+    <div class="teaminfocont">
+      <p class="teamname">Jade Lacsamana</p>
+      <p class="teaminfo">Jade has a degree in Geographic Analysis and an Ecosystem Mangement Technician diploma. She's
+        currently working towards a graduate ceritifcate in GIS at Fleming College. While working for the USGS she
+        helped create accurate land cover maps for most of Western Canada. She excels at SQL and all things database;
+        if your interested in the environmental aspects of geoanalysis she's got you covered.
+        </p>
+      <button class="linkedinbutton" onclick='LinkedinJL()'> <i class="fa fa-linkedin"></i></button>
+    </div>
+  </div>
+  <div>
+    <div>
+      <img class="teamimage" src="images/Ridley.jpg" alt="Ridley at the park">
+    </div>
+    <div class="teaminfocont">
+      <p class="teamname"> Ridley Soudack </p>
+      <p class="teaminfo">Ridley has a degree in Sociology and International Relations and experience with project
+        coordination and management. He's currently working towards a graduate ceritifcate in GIS at Fleming College. He has 
+        gained experience georeferencing while working with the MNRF and excels at applying image filters to isolate
+        the desired result. His skills with database design, spatial analysis and time management will ensure top dollar productions.
+      </p>
+      <button class="linkedinbutton" onclick='LinkedinRS()'> <i class="fa fa-linkedin"></i></button>
+    </div>
+  </div>
+  <div>
+    <div>
+      <img class="teamimage" src="images/VictorTeamsPg.jpg" alt="Victor out in the field">
+    </div>
+    <div class="teaminfocont">
+      <p class="teamname">Victor Toth</p>
+      <p class="teaminfo">Victor has a degree in Geology and a Mechanical Engineering Design diploma. He's 
+        currently working towards a graduate ceritifcate in GIS at Fleming College. His field-work experience
+        and knowledge from working in remote areas of Northern Canada combined with his geospatial technology skills
+        make him highly sought after.
+      </p>
+      <button class="linkedinbutton" onclick='LinkedinVT()'> <i class="fa fa-linkedin"></i></button>
+    </div>
+  </div>
+  <div>
+    <div>
+      <img class="teamimage" src="images/ZachPic.png" alt="Smiling Zachary">
+    </div>
+    <div class="teaminfocont">
+      <p class="teamname">Zachary Masson</p>
+      <p class="teaminfo"> Zachary has a degree in Human Geography from Concordia University and has done research 
+        for the Climatology, Hydrology and PaleoEnvironments Lab, as well as PerosLabs at Bishops University. 
+        He has worked with sediment cores, extinct mammal remains, coprolites, plant macrofossils, isotope analysis 
+        and has a passion for history and ancient environments. He is currently working on the post graduate certificate at Fleming College.</p>
+      <button class="linkedinbutton" onclick='LinkedinZM()'> <i class="fa fa-linkedin"></i></button>
+    </div>
+  </div>
+</div>
+<!-- Our Partners section of team page, We got ESRIs support, woo! Owner: Kerstyne -->
+<div> 
+  <h2 class="PartnersTitle">Our Partners</h2>
+  <p class="partnerparagraphs">Proudly supported by one of the largest geospatial techonolgy companies in the world. Our associates excel at ArcGIS Pro
+    and ArcMap which they utilize to solve or implement our clients needs.
+  </p>
+  <p class="partnerparagraphs"> All associates are future Fleming College grads and look fondly on the challenges and learning opportunities
+    that presented themselves while taking the GIS: Applications Specialist post grad program.
+  </p>
+</div>
+<div class="flex-containerPart">
+  <div>
+      <!-- Image downloaded from https://www.pngkey.com/detail/u2q8o0y3r5r5o0w7_esri-logo-esri-science-of-where-logo/ -->
+      <a href="https://www.esri.com/en-us/home"><img class="PartnerLogos" src="images/ESRI.png" alt="Esri Logo"></a>
+      <p> Proud partners of ESRI</p>
+  </div>
+  <div>
+      <!-- Image downloaded from https://logos-world.net/wp-content/uploads/2021/08/Fleming-College-Logo.png -->
+      <a href="https://flemingcollege.ca/"><img class="PartnerLogos" src="images/FlemingLogo.png" alt="Fleming Logo"></a> 
+      <p> Proud partners of Fleming College</p>
+  </div>
+</div>
+<!-- Footer, Owner: Victor -->
+<footer class="footer">
+    <h4>Headquarters</h4>
+    <p>290 Bremner Blvd - Toronto, ON</p>
+    <p>Copyright 2021</p>
+</footer>  
+<script src="js/javascript.js"></script>
+</body>
+  

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <!-- Template taken from w3schools and gutted; https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_website&stacked=h -->
+  <title>Lumpy Potato</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- stylesheet for hamburger menu icon: -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src= "js/javascript.js"></script>
+</head>
+<body>
+<!-- -----------------
+- Navbar
+- Owner : Ridley Soudack
+- Date  : Dec 6
+------------------- -->
+  <div class="navbar-flex" id="headerbar"> <!-- This flex contains the two sides of the header - the logo, and the navbar buttons-->
+    <div class="navbar-flex-left">
+      <a class="logo-container" href = 'index.html'>
+        <img class='logo' src='images/logo.png' alt = 'Lumpy Potato'>
+      </a> <!-- The hamburger icon will only appear for mobile screens-->
+      <a class="hamburger" href="javascript:void(0);" onclick="navBar()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="navbar-flex-right"> <!-- This flexbox contains the navbar buttons. It is accessible on mobile through the hamburger menu.-->
+      <div class="navbar-menu" id="navbarmaster"> <!--The general design of the navbar is based on: https://www.w3schools.com/css/css_navbar_horizontal.asp but is heavily modified.-->
+        <div class="dropdown">
+          <a class="navbar-item" href="portfolio.html" >Portfolio</a>
+          <div class="dropdown-menu"> <!-- Two of our navbar items have dropdown menus. The coding and animation for these dropdowns is based on: https://codinhood.com/micro/10-dropdown-menu-animations-css-transform-->
+            <a class="dropdown-item1" href="portfolio.html#present">Present</a>
+            <a class="dropdown-item2" href="portfolio.html#past">Past</a>
+          </div>
+        </div>
+        <a class="navbar-item" href= "testimonials.html" >Testimonials</a>
+        <a class="navbar-item" href="TeamPage.html" >Team</a>
+        <div class="dropdown">
+          <a class="navbar-item" id="active" href="contact.html" >Contact</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item1" href="contact.html#ProjForm">Project Form</a>
+            <a class="dropdown-item2" href="contact.html#Offices">Offices</a>
+          </div>
+        </div>    
+        <a class="navbar-item" href="location.html" >Location</a>
+      </div>
+    </div>
+  </div>
+<!-- End Owner: Ridley-->
+<!-- Image Header, Owner: Kerstyne 11:12am-->
+<div class="heroimagecontainercontainer">
+<div class="heroimageProjOf">
+  <div class="heroimagetitle">
+  <!-- Image taken from https://surveyinggroup.com/dsm-dem-dtm-elevation-models-in-gis/ -->
+    <h1> Lumpy Potato </h1>  
+  </div>
+</div>
+</div>
+<!--Contact Page, Owner: Zachary-->
+<!--project form page (1/2)-->
+<h2 id='ProjForm'>Project Form</h2>
+<!-- flex container for the first page (project form description)-->
+<div class="flex-containerProjectForm">
+  <!-- class for the div containing the first flex box-->
+  <div class="projectformdesc">
+    <p>Have a project for us? Currently we are working on a number of cool projects! They include digitizing historic maps, a geological survey of IO, and an agricultural DEM analysis.</p>
+    <p>We are available to take on more and have an experience from a range of fields to help you with your project.</p>
+    <p>Fill out the form on the left to tell us more about the project so we can be as prepared as possible to help! </p>
+  </div>
+  <!-- class for second flex box (survey form)-->
+  <div class = "projectformsurv">
+    <div class="embed-container">
+      <iframe name="survey123webform" title="LumptyPotato_V1" src="//survey123.arcgis.com/share/861617a6930949ffa1362d21ddf8c1c2" allow="geolocation https://survey123.arcgis.com; camera https://survey123.arcgis.com">
+      </iframe></div>
+  </div>
+</div>
+<!-- Offices page (2/2) Owner: Zachary-->
+<h2 id='Offices'>Offices</h2>
+<p class="officesText">Lumpy Potato was originally based entirely in Toronto but as our company has grown we have expanded some of our services to our new Montreal office. </p>
+<p class="officesText">If you are interested in meeting one of our representatives you can always come to our office.</p>    
+<!--Flec contianer for the offices, styled per div-->
+<div class="flex-containeroffice">
+  <div>
+    <div>
+      <!--Toronto Location flex container-->
+      <h3>Toronto</h3>
+      <p>Located in downtown Toronto, our state of the art labs have been up and running since 2020.</p>
+      <p>Click to get directions to our location </p>
+      <p><button class="button2" onclick='getLocation()'>Directions</button></p>
+      <p>Make sure location is turned on for your browser!</p>
+    </div>
+  </div>
+  <div>
+    <div>
+      <!--Montreal Location flex container-->
+      <h3>Montreal</h3>
+      <p>Opened in 2021, our office is still a work in progress but will be fully running shortly!</p>
+      <p>Click to get directions to our location </p>
+      <p><button class="button2" onclick='getLocation2()'>Directions</button></p>
+      <p>Make sure location is turned on for your browser!</p>
+    </div>
+  </div>
+</div>
+<!-- Footer, Owner: Victor November 18, 2021-->
+<footer class="footer">
+	<h4>Headquarters</h4>
+	<p> 290 Bremner Blvd - Toronto, ON</p>
+	<p>Copyright 2021</p>
+</footer>
+<script src= "js/javascript.js"></script>
+</body>
+</html>
